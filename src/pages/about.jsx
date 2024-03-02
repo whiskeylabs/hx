@@ -33,7 +33,7 @@ const About = (props) => {
 
   return (
     <Layouts>
-    	<PageBanner pageTitle={"About Us"} pageDesc={"Creative studio at the intersection of art, designand technology."} />
+    	<PageBanner pageTitle={"About Us"} pageDesc={"Creative Studio at the Intersection of Art, Design, and Technology."} />
       
       	{/* howell About */}
 	  	<section className="howell-section gap-top-140 gap-bottom-140">
@@ -44,13 +44,13 @@ const About = (props) => {
 						{/* Heading */}
 						<div className="howell-heading gap-bottom-60">
 							<div className="howell-subtitle-1">
-								<span> Welcome to howell </span>
+								<span> Welcome to Howell </span>
 							</div>
 							<h2 className="howell-title-2">
-								<span> We are a digital agency, <br/>passionate about building <br/>and designing brands </span>
+								<span>We are visionaries passionate about molding the future of brands.</span>
 							</h2>
 							<div className="howell-text">
-								<p>From the moment our company was founded, we have helped our clients find <strong>exceptional solutions for their businesses</strong>, creating memorable brands and digital products. Our expertise grows with each year, and our accumulated experience. </p>
+								<p>Since our inception, we've been at the forefront of innovation, helping our clients forge unforgettable identities and digital experiences. Our journey is marked by a relentless pursuit of excellence, with each project adding to our legacy of creativity.</p>
 							</div>
 						</div>
 
@@ -63,61 +63,13 @@ const About = (props) => {
 					</div>
 				</div>
 
-				{/* Numbers items */}
-				<div className="row gap-row gap-bottom-100">
-
-					{/*number-item*/}
-					<div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-						<div className="howell-counter">
-							<div className="num howell-text-white js-counter" data-end-value="23">
-								<CountUp end="23" duration={7} enableScrollSpy={true} scrollSpyOnce={true} />
-							</div>
-							<div className="num-after howell-text-white"> + </div>
-							<div className="label"> Team members </div>
-						</div>
-					</div>
-
-					{/*number-item*/}
-					<div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-						<div className="howell-counter">
-							<div className="num howell-text-white js-counter" data-end-value="99">
-								<CountUp end="99" duration={7} enableScrollSpy={true} scrollSpyOnce={true} />
-							</div>
-							<div className="num-after howell-text-white"> + </div>
-							<div className="label"> Completed projects </div>
-						</div>
-					</div>
-
-					{/*number-item*/}
-					<div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-						<div className="howell-counter">
-							<div className="num howell-text-white js-counter" data-end-value="12">
-								<CountUp end="12" duration={7} enableScrollSpy={true} scrollSpyOnce={true} />
-							</div>
-							<div className="num-after howell-text-white"> M </div>
-							<div className="label"> Lines of code </div>
-						</div>
-					</div>
-
-				</div>
-
-				{/* Video */}
-				<div className="howell-video" data-howell-overlay data-howell-scroll>
-					<div className="image" onClick={ (e) => clickedVideoButton(e) } style={{"backgroundImage": "url(/images/hero-digital-1.jpg)"}} />
-					<iframe className="js-video-iframe" data-src="https://www.youtube.com/embed/Gu6z6kIukgg?showinfo=0&rel=0&autoplay=1"></iframe>
-					<div className="play howell-circle-text" onClick={ (e) => clickedVideoButton(e) }>
-						<div className="arrow" />
-						<div className="label howell-text-black howell-circle-text-label"> Play Video - Play Video - Play Video - </div>
-					</div>
-				</div>
-
 				{/* Description */}
 				<div className="row gap-top-100">
 					<div className="col-xs-12 col-sm-12 col-md-4 col-lg-3">
 						<h5 className="text-uppercase">Our Mission</h5>
 					</div>
 					<div className="col-xs-12 col-sm-12 col-md-8 col-lg-9">
-						From the moment our company was founded, we have helped our clients find exceptional solutions for their businesses , creating memorable brands and digital products. Our expertise grows with each year, and our accumulated experience.
+					To transcend the ordinary, providing exceptional, forward-thinking solutions for our clients. We craft memorable brands and digital products that stand the test of time, with our expertise and insight growing deeper by the day.
 					</div>
 				</div>
 
@@ -127,7 +79,7 @@ const About = (props) => {
 						<h5 className="text-uppercase">Our Goal</h5>
 					</div>
 					<div className="col-xs-12 col-sm-12 col-md-8 col-lg-9">
-						Our goal is to deliver amazing experiences that make people talk, and build strategic value for brands, tech, entertainment, arts &amp; culture.
+					To ignite conversations and build strategic value across brands, technology, entertainment, arts, and culture. We aim to deliver experiences that are not just seen or heard but felt and remembered.
 					</div>
 				</div>
 
@@ -150,7 +102,7 @@ const About = (props) => {
 
 		<Services4Section services={props.services} />
 
-		<AwardsSection />
+		{/* <AwardsSection />
 
       	<HistorySlider />
 
@@ -158,7 +110,7 @@ const About = (props) => {
 
       	<Testimonial2Slider />
 
-      	<PartnersSection />
+      	<PartnersSection /> */}
       
     </Layouts>
   );

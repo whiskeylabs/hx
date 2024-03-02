@@ -16,21 +16,21 @@ const Footer2 = () => {
 			<div className="footer--default">
 				<div className="container">
 
-					<div className="row gap-bottom-40">
+					<div className="row gap-bottom-80">
 						<div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
 							{/* Heading */}
 							<div className="howell-heading">
 								<h2 className="howell-title-2">
-									<span>Let’s Chat! Let’s Build Something <br/>Awesome Together</span>
+									<span>Come to where the wild ideas play.</span>
 								</h2>
-								<p><Link href="/contact" className="howell-footer-lnk howell-lnk lnk--revert">Lets Start Project</Link></p>
+								<p><Link href="/contact" className="howell-footer-lnk howell-lnk lnk--revert">Send Us A Message</Link></p>
 							</div>
 
 						</div>
 					</div>
 
-					<div className="row gap-bottom-40">
+					<div className="row gap-bottom-60">
 						<div className="col-xs-12 col-sm-12 col-md-6 col-lg-2">
 
 							{/* Logo */}

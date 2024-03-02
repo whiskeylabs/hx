@@ -3,7 +3,7 @@
 image: "/images/posts3.jpg"
 icon: "/images/serv-icon1.png"
 title: "Social Media Campaign"
-short: "Lorem ipm dolor amet, consectetur adipiing lit Sunt sed ad possimus ils magnam maores."
+short: "Engaging your audience where they live, with messages that resonate and inspire."
 
 #full details
 accordion:

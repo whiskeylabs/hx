@@ -3,7 +3,7 @@
 image: "/images/post3.jpg"
 icon: "/images/serv-icon3.png"
 title: "Machine Learning / AI"
-short: "Lorem ipm dolor amet, consectetur adipiing lit Sunt sed ad possimus ils magnam maores."
+short: "Harnessing the power of advanced technology to predict trends, personalize experiences, and revolutionize engagement."
 
 #full details
 accordion:

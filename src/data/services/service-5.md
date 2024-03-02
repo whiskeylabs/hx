@@ -3,7 +3,7 @@
 image: "/images/posts4.jpg"
 icon: "/images/serv-icon4.png"
 title: "Visual Identity"
-short: "Lorem ipm dolor amet, consectetur adipiing lit Sunt sed ad possimus ils magnam maores."
+short: "Shaping the face of your brand with iconic designs that stand apart in a crowded marketplace."
 
 #full details
 accordion:

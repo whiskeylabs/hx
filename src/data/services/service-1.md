@@ -3,7 +3,7 @@
 image: "/images/post6.jpg"
 icon: "/images/serv-icon6.png"
 title: "Brand Strategy"
-short: "Lorem ipm dolor amet, consectetur adipiing lit Sunt sed ad possimus ils magnam maores."
+short: "Crafting the blueprint for your brand's future, guiding your vision to fruition with strategic insight and precision."
 
 #full details
 accordion:

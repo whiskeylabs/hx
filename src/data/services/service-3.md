@@ -3,7 +3,7 @@
 image: "/images/posts2.jpg"
 icon: "/images/serv-icon5.png"
 title: "Creative Direction"
-short: "Lorem ipm dolor amet, consectetur adipiing lit Sunt sed ad possimus ils magnam maores."
+short: "Leading the charge with visionary concepts, ensuring every aspect of your brand speaks in a unified, compelling voice."
 
 #full details
 accordion:
