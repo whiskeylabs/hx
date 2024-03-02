@@ -4,18 +4,18 @@ import Link from "next/link";
 const PricingSection = ( { bg, hiddenHeading } ) => {
     return (
       <>
-        {/* Onovo Pricing */}
-        <section className={`onovo-section onovo-section-${bg} gap-top-140 gap-bottom-140`}>
+        {/* howell Pricing */}
+        <section className={`howell-section howell-section-${bg} gap-top-140 gap-bottom-140`}>
           <div className="container">
 
             {hiddenHeading == undefined &&
             <>
               {/* Heading */}
-              <div className="onovo-heading gap-bottom-40">
-                <div className="onovo-subtitle-1">
+              <div className="howell-heading gap-bottom-40">
+                <div className="howell-subtitle-1">
                   <span>{Data.subtitle}</span>
                 </div>
-                <h2 className="onovo-title-2">
+                <h2 className="howell-title-2">
                   <span dangerouslySetInnerHTML={{__html: Data.title}} />
                 </h2>
               </div>
@@ -27,10 +27,10 @@ const PricingSection = ( { bg, hiddenHeading } ) => {
 
               {Data.items.map((item, key) => (
               <div key={`pricing-item-${key}`} className="col-xs-12 col-sm-12 col-md-6 col-lg-4">
-                <div className="onovo-pricing">
-                  <div className={item.active == 1 ? "onovo-pricing-item active--default": "onovo-pricing-item"}>
+                <div className="howell-pricing">
+                  <div className={item.active == 1 ? "howell-pricing-item active--default": "howell-pricing-item"}>
                     { item.active == 1 &&
-                    <div className="pricing--badge onovo-text-white">
+                    <div className="pricing--badge howell-text-white">
                       <span>Recommended</span>
                     </div>
                     }
@@ -46,8 +46,8 @@ const PricingSection = ( { bg, hiddenHeading } ) => {
                       </div>
                     </div>
                     <div className="desc">
-                      <div className="pricing--overlay onovo-hover-3 onovo-hover-black" />
-                      <div className="image onovo-text-white">
+                      <div className="pricing--overlay howell-hover-3 howell-hover-black" />
+                      <div className="image howell-text-white">
                         <i aria-hidden="true" className={item.icon}></i>
                       </div>
                       <div className="list">
@@ -61,7 +61,7 @@ const PricingSection = ( { bg, hiddenHeading } ) => {
                           </ul>
                         </div>
                       </div>
-                      <Link className="onovo-btn onovo-hover-btn btn--border btn--full btn--color" href={item.button.link}>
+                      <Link className="howell-btn howell-hover-btn btn--border btn--full btn--color" href={item.button.link}>
                         <span>{item.button.label}</span>
                       </Link>
                     </div>

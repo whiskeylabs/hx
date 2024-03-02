@@ -12,7 +12,7 @@ const Footer2 = () => {
   return (
     <>
         {/* Footer */}
-        <footer className="onovo-footer footer--white">
+        <footer className="howell-footer footer--white">
 			<div className="footer--default">
 				<div className="container">
 
@@ -20,11 +20,11 @@ const Footer2 = () => {
 						<div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
 							{/* Heading */}
-							<div className="onovo-heading">
-								<h2 className="onovo-title-2">
+							<div className="howell-heading">
+								<h2 className="howell-title-2">
 									<span>Let’s Chat! Let’s Build Something <br/>Awesome Together</span>
 								</h2>
-								<p><Link href="/contact" className="onovo-footer-lnk onovo-lnk lnk--revert">Lets Start Project</Link></p>
+								<p><Link href="/contact" className="howell-footer-lnk howell-lnk lnk--revert">Lets Start Project</Link></p>
 							</div>
 
 						</div>
@@ -34,7 +34,7 @@ const Footer2 = () => {
 						<div className="col-xs-12 col-sm-12 col-md-6 col-lg-2">
 
 							{/* Logo */}
-							<div className="onovo-f-logo gap-bottom-40" style={{"maxWidth": "70px"}}>
+							<div className="howell-f-logo gap-bottom-40" style={{"maxWidth": "70px"}}>
 								<Link href="/">
 									<img src={appData.footer.logo.image} alt={appData.footer.logo.alt} />
 								</Link>
@@ -44,7 +44,7 @@ const Footer2 = () => {
 						<div className="col-xs-12 col-sm-12 col-md-6 col-lg-3">
 
 							{/* Description */}
-							<div className="onovo-text">
+							<div className="howell-text">
 								From the moment our company was founded, we have helped our clients find exceptional solutions <strong>for their businesses</strong>.
 							</div>
 
@@ -52,26 +52,26 @@ const Footer2 = () => {
 						<div className="col-xs-12 col-sm-12 col-md-6 col-lg-3 offset-lg-1">
 
 							{/* Description */}
-							<div className="onovo-text">
-								<ul className="onovo-footer-menu">
+							<div className="howell-text">
+								<ul className="howell-footer-menu">
 									<li>
 										<Link href="/services/service-1">
-											<span className="onovo-lnk">Branding &#038; logo</span>
+											<span className="howell-lnk">Branding &#038; logo</span>
 										</Link>
 									</li>
 									<li>
 										<Link href="/services/service-2">
-											<span className="onovo-lnk">Web design</span>
+											<span className="howell-lnk">Web design</span>
 										</Link>
 									</li>
 									<li>
 										<Link href="/services/service-3">
-											<span className="onovo-lnk">Development Services</span>
+											<span className="howell-lnk">Development Services</span>
 										</Link>
 									</li>
 									<li>
 										<Link href="/blog">
-											<span className="onovo-lnk">Publications</span>
+											<span className="howell-lnk">Publications</span>
 										</Link>
 									</li>
 								</ul>
@@ -81,12 +81,12 @@ const Footer2 = () => {
 						<div className="col-xs-12 col-sm-12 col-md-6 col-lg-2">
 
 							{/* Description */}
-							<div className="onovo-text">
+							<div className="howell-text">
 								Baird House, 15-17 St Cross St <br />London EC1N 8UW
 								<p>
-									<a className="onovo-lnk" href="tel:+4402074302973" target="blank">+44 (0) 20 7430 2973</a>
+									<a className="howell-lnk" href="tel:+4402074302973" target="blank">+44 (0) 20 7430 2973</a>
 									<br />
-									<a className="onovo-lnk" href="mailto:username@domain.com" target="blank">username@domain.com</a>
+									<a className="howell-lnk" href="mailto:username@domain.com" target="blank">username@domain.com</a>
 								</p>
 							</div>
 
@@ -105,11 +105,11 @@ const Footer2 = () => {
 						<div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 align-right">
 
 							{/* Social*/}
-							<div className="onovo-social-1 onovo-social-active">
+							<div className="howell-social-1 howell-social-active">
 								<ul>
 									{appData.social.map((item, key) => (
 									<li key={`fsocial-item-${key}`}>
-										<a className="onovo-social-link onovo-hover-2" href={item.link} title={item.title} target="_blank">
+										<a className="howell-social-link howell-hover-2" href={item.link} title={item.title} target="_blank">
 											<i className={item.icon} />
 										</a>
 									</li>

@@ -5,31 +5,31 @@ import { Formik } from 'formik';
 const CallToAction2Section = () => {
   return (
     <>
-        {/* Onovo CTA-2 */}
-        <section className="onovo-section gap-top-140 gap-bottom-140">
+        {/* howell CTA-2 */}
+        <section className="howell-section gap-top-140 gap-bottom-140">
             <div className="container" style={{"backgroundImage": "url("+Data.bg_image+")", "backgroundPosition": "65% 0%", "backgroundRepeat": "no-repeat", "backgroundSize": "contain"}}>
                 <div className="row">
                     <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6 align-self-center gap-bottom-40">
 
                         {/* Heading */}
-                        <div className="onovo-heading gap-bottom-40">
-                            <div className="onovo-subtitle-1">
+                        <div className="howell-heading gap-bottom-40">
+                            <div className="howell-subtitle-1">
                                 <span>{Data.subtitle}</span>
                             </div>
-                            <h2 className="onovo-title-2">
+                            <h2 className="howell-title-2">
                                 <span dangerouslySetInnerHTML={{__html: Data.title}} />
                             </h2>
                         </div>
 
                         {/* Text */}
-                        <div className="onovo-cta-2-text" dangerouslySetInnerHTML={{__html: Data.text}} />
+                        <div className="howell-cta-2-text" dangerouslySetInnerHTML={{__html: Data.text}} />
 
                         {/* Social*/}
-                        <div className="onovo-social-1">
+                        <div className="howell-social-1">
                             <ul>
                                 {Data.social.map((item, key) => (
                                 <li key={`cta-social-item-${key}`}>
-                                    <a className="onovo-social-link onovo-hover-2" href={item.link} title={item.title} target="_blank">
+                                    <a className="howell-social-link howell-hover-2" href={item.link} title={item.title} target="_blank">
                                         <i className={item.icon} />
                                     </a>
                                 </li>
@@ -40,8 +40,8 @@ const CallToAction2Section = () => {
                     </div>
                     <div className="col-xs-12 col-sm-12 col-md-12 col-lg-5 offset-lg-1">
 
-                        {/* Onovo Form */}
-                        <div className="onovo-form-box onovo-text-white">
+                        {/* howell Form */}
+                        <div className="howell-form-box howell-text-white">
                             <h5>Send Us A Message</h5>
                             <p>Feel some love, to see what we can do...t!</p>
                             <Formik
@@ -163,7 +163,7 @@ const CallToAction2Section = () => {
                                     </div>
                                     <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                         <p>
-                                            <button type="submit" className="onovo-btn onovo-hover-btn btn--active">
+                                            <button type="submit" className="howell-btn howell-hover-btn btn--active">
                                                 <span>Send Message</span>
                                             </button>
                                         </p>

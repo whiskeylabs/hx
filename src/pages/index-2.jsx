@@ -24,15 +24,7 @@ const Home2 = (props) => {
     <Layouts header={2} footer={2}>
       <>
         <Hero2Slider />
-        <Services2Section />
-        <HistorySlider />
-        <ProjectsSection projects={props.projects} />
-        <PricingSection bg={"bg"} />
-        <Team2Section team={props.team} />
-        <Testimonial2Slider />
-        <LatestPostsSlider posts={props.posts} />
-        <CallToAction2Section />
-        <PartnersSection />
+
       </>
     </Layouts>
   );

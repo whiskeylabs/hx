@@ -1,6 +1,6 @@
 {
     "settings": {
-        "siteName": "Onovo",
+        "siteName": "HOWELL — Where Wild Ideas Play",
         "preloader": true,
         "formspreeURL": "https://formspree.io/f/your_api_key",
         "portfolio": {
@@ -27,7 +27,7 @@
     "header": {
         "logo": {
             "image": "/images/logo-black.png",
-            "image_white": "/images/logo-main.png",
+            "image_white": "/images/logo-main.svg",
             "alt": "logo"
         },
         "menu": [
@@ -212,7 +212,7 @@
                 "alt": "image"
             }
         ],
-        "copy": "© 2023 ONOVO by <a href='https://bslthemes.com' target='blank' class='onovo-lnk lnk--white'>bslthemes Team</a>. All rights reserved."
+        "copy": "© 2024 HOWELL. All rights reserved."
     },
     "social": [
         {

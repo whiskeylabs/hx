@@ -1,4 +1,4 @@
-import DefaultFooter from "./DefaultFooter";
+import DefaultFooter from "./Footer2";
 import Footer2 from "./Footer2";
 
 const Footer = ({ footer }) => {

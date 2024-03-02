@@ -35,21 +35,21 @@ const About = (props) => {
     <Layouts>
     	<PageBanner pageTitle={"About Us"} pageDesc={"Creative studio at the intersection of art, designand technology."} />
       
-      	{/* Onovo About */}
-	  	<section className="onovo-section gap-top-140 gap-bottom-140">
+      	{/* howell About */}
+	  	<section className="howell-section gap-top-140 gap-bottom-140">
 			<div className="container">
 				<div className="row">
 					<div className="col-xs-12 col-sm-12 col-md-12 col-lg-8">
 
 						{/* Heading */}
-						<div className="onovo-heading gap-bottom-60">
-							<div className="onovo-subtitle-1">
-								<span> Welcome to Onovo </span>
+						<div className="howell-heading gap-bottom-60">
+							<div className="howell-subtitle-1">
+								<span> Welcome to howell </span>
 							</div>
-							<h2 className="onovo-title-2">
+							<h2 className="howell-title-2">
 								<span> We are a digital agency, <br/>passionate about building <br/>and designing brands </span>
 							</h2>
-							<div className="onovo-text">
+							<div className="howell-text">
 								<p>From the moment our company was founded, we have helped our clients find <strong>exceptional solutions for their businesses</strong>, creating memorable brands and digital products. Our expertise grows with each year, and our accumulated experience. </p>
 							</div>
 						</div>
@@ -58,7 +58,7 @@ const About = (props) => {
 					<div className="col-xs-12 col-sm-12 col-md-12 col-lg-3 offset-lg-1 hide-on-mobile">
 
 						{/* Image */}
-						<img src="/images/onovo-about-logo.png" alt="" />
+						<img src="/images/howell-about-logo.png" alt="" />
 
 					</div>
 				</div>
@@ -68,33 +68,33 @@ const About = (props) => {
 
 					{/*number-item*/}
 					<div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-						<div className="onovo-counter">
-							<div className="num onovo-text-white js-counter" data-end-value="23">
+						<div className="howell-counter">
+							<div className="num howell-text-white js-counter" data-end-value="23">
 								<CountUp end="23" duration={7} enableScrollSpy={true} scrollSpyOnce={true} />
 							</div>
-							<div className="num-after onovo-text-white"> + </div>
+							<div className="num-after howell-text-white"> + </div>
 							<div className="label"> Team members </div>
 						</div>
 					</div>
 
 					{/*number-item*/}
 					<div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-						<div className="onovo-counter">
-							<div className="num onovo-text-white js-counter" data-end-value="99">
+						<div className="howell-counter">
+							<div className="num howell-text-white js-counter" data-end-value="99">
 								<CountUp end="99" duration={7} enableScrollSpy={true} scrollSpyOnce={true} />
 							</div>
-							<div className="num-after onovo-text-white"> + </div>
+							<div className="num-after howell-text-white"> + </div>
 							<div className="label"> Completed projects </div>
 						</div>
 					</div>
 
 					{/*number-item*/}
 					<div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-						<div className="onovo-counter">
-							<div className="num onovo-text-white js-counter" data-end-value="12">
+						<div className="howell-counter">
+							<div className="num howell-text-white js-counter" data-end-value="12">
 								<CountUp end="12" duration={7} enableScrollSpy={true} scrollSpyOnce={true} />
 							</div>
-							<div className="num-after onovo-text-white"> M </div>
+							<div className="num-after howell-text-white"> M </div>
 							<div className="label"> Lines of code </div>
 						</div>
 					</div>
@@ -102,12 +102,12 @@ const About = (props) => {
 				</div>
 
 				{/* Video */}
-				<div className="onovo-video" data-onovo-overlay data-onovo-scroll>
+				<div className="howell-video" data-howell-overlay data-howell-scroll>
 					<div className="image" onClick={ (e) => clickedVideoButton(e) } style={{"backgroundImage": "url(/images/hero-digital-1.jpg)"}} />
 					<iframe className="js-video-iframe" data-src="https://www.youtube.com/embed/Gu6z6kIukgg?showinfo=0&rel=0&autoplay=1"></iframe>
-					<div className="play onovo-circle-text" onClick={ (e) => clickedVideoButton(e) }>
+					<div className="play howell-circle-text" onClick={ (e) => clickedVideoButton(e) }>
 						<div className="arrow" />
-						<div className="label onovo-text-black onovo-circle-text-label"> Play Video - Play Video - Play Video - </div>
+						<div className="label howell-text-black howell-circle-text-label"> Play Video - Play Video - Play Video - </div>
 					</div>
 				</div>
 

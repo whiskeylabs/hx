@@ -9,21 +9,21 @@ const Services3Section = ({ services }) => {
 
   return (
     <>
-        {/* Onovo Services */}
-        <section className="onovo-section onovo-section-bg gap-top-140 gap-bottom-140">
+        {/* howell Services */}
+        <section className="howell-section howell-section-bg gap-top-140 gap-bottom-140">
             <div className="container">
                 <div className="row">
                     <div className="col-xs-12 col-sm-12 col-md-12 col-lg-8">
 
                         {/* Heading */}
-                        <div className="onovo-heading gap-bottom-60">
-                            <div className="onovo-subtitle-1">
+                        <div className="howell-heading gap-bottom-60">
+                            <div className="howell-subtitle-1">
                                 <span>{Data.subtitle}</span>
                             </div>
-                            <h2 className="onovo-title-2">
+                            <h2 className="howell-title-2">
                                 <span dangerouslySetInnerHTML={{__html: Data.title}} />
                             </h2>
-                            <div className="onovo-text">
+                            <div className="howell-text">
                                 <p dangerouslySetInnerHTML={{__html: Data.text}} />
                             </div>
                         </div>
@@ -38,17 +38,17 @@ const Services3Section = ({ services }) => {
                 </div>
 
                 {/* Services Showcase */}
-                <div className="onovo-services-showcase">
+                <div className="howell-services-showcase">
                     <div className="row">
                         <div className="col-xs-0 col-sm-0 col-md-0 col-lg-7"></div>
                         <div className="col-xs-12 col-sm-12 col-md-12 col-lg-5">
-                            <div className="onovo-subtitle-1">
+                            <div className="howell-subtitle-1">
                                 <span>{Data.title2}</span>
                             </div>
 
                             {/*items*/}
                             <div className="items">
-                                <span className="img-circle onovo-circle-move" />
+                                <span className="img-circle howell-circle-move" />
 
                                 <ul>
                                     {services.slice(0, Data.numOfItems).map((item, key) => (
@@ -59,11 +59,11 @@ const Services3Section = ({ services }) => {
                                         <h5 className="title">
                                             <a href={`/services/${item.id}`}>
                                                 <span className="num">
-                                                    <span data-splitting data-onovo-scroll> 0{key+1}. </span>
+                                                    <span data-splitting data-howell-scroll> 0{key+1}. </span>
                                                 </span>
                                                 <span className="name">
-                                                    <span className="onovo-lnk">
-                                                        <span data-splitting data-onovo-scroll>{item.title}</span>
+                                                    <span className="howell-lnk">
+                                                        <span data-splitting data-howell-scroll>{item.title}</span>
                                                     </span>
                                                 </span>
                                             </a>
@@ -74,7 +74,7 @@ const Services3Section = ({ services }) => {
                             </div>
 
                             {/* Button */}
-                            <a href={Data.button.link} className="onovo-btn onovo-hover-btn btn--border">
+                            <a href={Data.button.link} className="howell-btn howell-hover-btn btn--border">
                                 <i className="arrow">
                                     <span />
                                 </i>

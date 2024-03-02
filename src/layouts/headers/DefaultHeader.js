@@ -22,34 +22,34 @@ const DefaultHeader = ({ darkHeader, cartButton }) => {
     e.preventDefault();
     desktopMenuToggle(!desktopMenu);
     
-    const menuPopup = document.querySelector('.onovo-menu-popup');
-    const menuContainer = document.querySelector('.onovo-menu-container');
+    const menuPopup = document.querySelector('.howell-menu-popup');
+    const menuContainer = document.querySelector('.howell-menu-container');
     const menuBody = document.querySelector('body');
-    const menuHeader = document.querySelector('.onovo-header');
-    const menuButton = document.querySelector('.onovo-menu-btn');
+    const menuHeader = document.querySelector('.howell-header');
+    const menuButton = document.querySelector('.howell-menu-btn');
 
     if ( desktopMenu ) {
-			menuBody.classList.remove('onovo--noscroll');
+			menuBody.classList.remove('howell--noscroll');
 			menuHeader.classList.remove('header--active');
 			menuPopup.classList.remove('menu--ready');
-			menuContainer.classList.add('onovo--noscroll');
-      menuButton.parentNode.classList.add('onovo--notouch');
+			menuContainer.classList.add('howell--noscroll');
+      menuButton.parentNode.classList.add('howell--notouch');
 			let timer1 = setTimeout(function(){
 				menuPopup.classList.remove('menu--open');
 			}, 300);
 			let timer2 = setTimeout(function(){
-				menuButton.parentNode.classList.remove('onovo--notouch');
+				menuButton.parentNode.classList.remove('howell--notouch');
 				menuPopup.classList.remove('menu--visible');
 			}, 1600);
 		} else {
-			menuBody.classList.add('onovo--noscroll');
+			menuBody.classList.add('howell--noscroll');
 			menuHeader.classList.add('header--active');
 			menuPopup.classList.add('menu--visible');
 			menuPopup.classList.add('menu--open');
-      menuButton.parentNode.classList.add('onovo--notouch');
+      menuButton.parentNode.classList.add('howell--notouch');
 			let timer3 = setTimeout(function(){
-				menuButton.parentNode.classList.remove('onovo--notouch');
-				menuContainer.classList.remove('onovo--noscroll');
+				menuButton.parentNode.classList.remove('howell--notouch');
+				menuContainer.classList.remove('howell--noscroll');
 				menuPopup.classList.add('menu--ready');
 			}, 600);
 		}
@@ -67,14 +67,14 @@ const DefaultHeader = ({ darkHeader, cartButton }) => {
   return (
     <>
       {/* Header */}
-      <header className={darkHeader ? "onovo-header" : "onovo-header header--white"}>
+      <header className={darkHeader ? "howell-header" : "howell-header header--white"}>
         <div className="header--builder">
           <div className="container">
             <div className="row">
               <div className="col-4 col-xs-4 col-sm-4 col-md-4 col-lg-3 align-self-center">
 
                 {/* Logo */}
-                <div className="onovo-logo-image" style={{"maxWidth": "70px"}}>
+                <div className="howell-logo-image" style={{"maxWidth": "150px"}}>
                   <Link href="/">
                     <img src={appData.header.logo.image} alt={appData.header.logo.alt} />
                     <img className="logo--white" src={appData.header.logo.image_white} alt={appData.header.logo.alt} />
@@ -83,48 +83,38 @@ const DefaultHeader = ({ darkHeader, cartButton }) => {
 
               </div>
               <div className="col-4 col-xs-4 col-sm-4 col-md-4 col-lg-6 align-self-center align-center">
+  {/* Menu Hamburger */}
+  <a href="#" className={desktopMenu ? "howell-menu-btn btn--active" : "howell-menu-btn"} onClick={(e) => clickedDesktopMenu(e)}>
+    <span />
+  </a>
 
-                {/* Menu Hamburger */}
-                <a href="#" className={desktopMenu ? "onovo-menu-btn btn--active" : "onovo-menu-btn"} onClick={ (e) => clickedDesktopMenu(e) }><span /></a>
+  <div className="howell-menu-popup align-left">
+    <div className="howell-menu-overlay" />
+    <div className="howell-menu-overlay-after" />
 
-                <div className="onovo-menu-popup align-left">
-                  <div className="onovo-menu-overlay" />
-                  <div className="onovo-menu-overlay-after" />
+    <div className="howell-menu-container howell--noscroll">
+      <div className="container">
+        <div className="howell-menu">
+          <ul className="howell-menu-nav">
+            {navItems.map((item, key) => (
+              <li key={`header-nav-item-${key}`} className={item.classes}>
+                {/* Updated link to not handle children */}
+                <Link className="howell-lnk lnk--active" href={item.link}>{item.label}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-                  <div className="onovo-menu-container onovo--noscroll">
-                    <div className="container">
-                      <div className="onovo-menu">
-                        <ul className="onovo-menu-nav">
-                          {navItems.map((item, key) => (
-                          <li key={`header-nav-item-${key}`} className={item.classes}>
-                            <Link className={item.children ? "onovo-lnk lnk--active onovo-dropdown-toggle" : "onovo-lnk lnk--active"} onClick={item.children != 0 ? (e) => clickedMobileMenuItemParent(e) : ""} href={item.link}>{item.label}</Link>
-                            {item.children &&
-                            <i className="icon fas fa-chevron-down" />
-                            }
-                            {item.children != 0 &&
-                            <ul className="sub-menu">
-                              {item.children.map((subitem, key) => (
-                              <li key={`header-nav-sub-item-${key}`}>
-                                <Link className="onovo-lnk lnk--active" href={subitem.link}>{subitem.label}</Link>
-                              </li>
-                              ))}
-                            </ul>
-                            }
-                          </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
               <div className="col-4 col-xs-4 col-sm-4 col-md-4 col-lg-3 align-self-center align-right">
 
                 {/* Button */}
-                <Link className="onovo-head-btn onovo-hover-btn" href={appData.header.button.link}>
+                <Link className="howell-head-btn howell-hover-btn" href={appData.header.button.link}>
                   <span>
-                    <span className="onovo-lnk lnk--active">{appData.header.button.label}</span>
+                    <span className="howell-lnk lnk--active">{appData.header.button.label}</span>
                   </span>
                   <i className="arrow">
                     <span />

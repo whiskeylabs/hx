@@ -6,8 +6,8 @@ const PaginationPage = ({ items }) => {
       <>
         {items.map((item, index) => (
         <div className="col-xs-12 col-sm-12 col-md-6 col-lg-4" key={`post-${index}`}>
-            <div className="onovo-blog-item">
-                <div className="image" data-onovo-overlay data-onovo-scroll>
+            <div className="howell-blog-item">
+                <div className="image" data-howell-overlay data-howell-scroll>
                     <Link href={`/blog/${item.id}`}>
                         <img src={item.image} alt={item.title} />
                     </Link>
@@ -22,11 +22,11 @@ const PaginationPage = ({ items }) => {
                             <span>{item.title}</span>
                         </Link>
                     </h5>
-                    <div className="onovo-text">
+                    <div className="howell-text">
                         <div>
                             <p>
                                 {item.short} <br />
-                                <Link href={`/blog/${item.id}`} className="onovo-btn onovo-hover-btn">
+                                <Link href={`/blog/${item.id}`} className="howell-btn howell-hover-btn">
                                     <span>Read more</span>
                                 </Link>
                             </p>

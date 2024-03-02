@@ -31,24 +31,24 @@ const FAQ = () => {
     <Layouts>
       <PageBanner pageTitle={"Client’s FAQ"} pageDesc={"Solving business problems is an everyday."} />
       
-      {/* Onovo Faq */}
-			<section className="onovo-section gap-top-140 gap-bottom-140">
+      {/* howell Faq */}
+			<section className="howell-section gap-top-140 gap-bottom-140">
 				<div className="container">
 
           {/* Faq items */}
           <Accordion>
-          <div className="onovo-faq-items">
+          <div className="howell-faq-items">
             {Content.items.map((item, key) => (
             <Accordion.Item key={`faq-item-${key}`} eventKey={`faq-acc-${key}`}>
-            <div className="onovo-faq-item onovo-collapse-item">
+            <div className="howell-faq-item howell-collapse-item">
               <Accordion.Header>
-              <h5 className="title onovo-collapse-btn">
+              <h5 className="title howell-collapse-btn">
                 <span>{item.heading}</span>
                 <i className="arrow" />
               </h5>
               </Accordion.Header>
               <Accordion.Body>
-                <div className="onovo-text">
+                <div className="howell-text">
                   <div dangerouslySetInnerHTML={{__html : item.content}} />
                 </div>
               </Accordion.Body>

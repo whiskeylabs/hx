@@ -19,7 +19,7 @@ const Layouts = ({
   useEffect(() => {
     // preloader
     if (typeof window !== 'undefined') {
-      document.querySelector('body').classList.remove('onovo--noscroll');
+      document.querySelector('body').classList.remove('howell--noscroll');
       const loader = document.getElementsByClassName('preloader');
 
       if (loader[0] && appData.settings.preloader){
@@ -42,7 +42,7 @@ const Layouts = ({
 
   return (
     <>
-      <div className={noFooter ? "onovo-page" : `onovo-page footer--fixed`}>
+      <div className={noFooter ? "howell-page" : `howell-page footer--fixed`}>
         <Preloader />
 
         {!noHeader && (

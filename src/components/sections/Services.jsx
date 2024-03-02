@@ -11,31 +11,31 @@ const ServicesSection = () => {
 
   return (
     <>
-        {/* Onovo Services */}
-        <section className="onovo-section gap-top-140 gap-bottom-140">
+        {/* howell Services */}
+        <section className="howell-section gap-top-140 gap-bottom-140">
             <div className="container-xl">
 
                 {/* Services items */}
-                <div className="row onovo-services-grid-fw">
+                <div className="row howell-services-grid-fw">
                     {Data.items.map((item, key) => (
                     <div key={`services-item-${key}`} className="col-xs-12 col-sm-12 col-md-6 col-lg-4 align-center">
-                        <div className={key == 1 ? "onovo-service-grid-item onovo-hover-1 active active--default" : "onovo-service-grid-item onovo-hover-1"}>
+                        <div className={key == 1 ? "howell-service-grid-item howell-hover-1 active active--default" : "howell-service-grid-item howell-hover-1"}>
                             <div className="image">
                                 <Link href={item.link}>
                                     <img decoding="async" src={item.image} alt={item.title} />
                                 </Link>
                             </div>
-                            <h5 className="onovo-title-3">
+                            <h5 className="howell-title-3">
                                 <a href={item.link}>
                                     <span>{item.title}</span>
                                 </a>
                             </h5>
-                            <div className="onovo-text">
+                            <div className="howell-text">
                                 <div>
                                     <p>{item.text}</p>
                                 </div>
                             </div>
-                            <div className="onovo-bubble">
+                            <div className="howell-bubble">
                                 <div className="bubble-1" />
                                 <div className="bubble-2" />
                                 <div className="bubble-3" />

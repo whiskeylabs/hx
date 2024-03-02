@@ -50,26 +50,26 @@ const PostsDetail = ( props ) => {
     <Layouts>
       <PageBanner pageTitle={postData.title} pageDesc={""} />
 
-      {/* Onovo Blog Detail */}
-			<section className="onovo-section onovo-post gap-top-140">
+      {/* howell Blog Detail */}
+			<section className="howell-section howell-post gap-top-140">
 				<div className="container">
 
 					{/* Image */}
-					<div className="onovo-post-pic" data-onovo-overlay data-onovo-scroll>
+					<div className="howell-post-pic" data-howell-overlay data-howell-scroll>
 						<img src={postData.image} alt={postData.title} />
 					</div>
 
 					{/* Post*/}
-					<div className="onovo-post-wrapper">
-						<div className="onovo-post-content">
+					<div className="howell-post-wrapper">
+						<div className="howell-post-content">
 
 							{/* Date */}
-							<div className="onovo-post-date">
+							<div className="howell-post-date">
 								<span className="date"><Date dateString={postData.date} /></span> by <a href="#" onClick={(e) => {e.preventDefault();}}>{postData.author.name}</a>
 							</div>
 
 							{/* Content */}
-							<div className="onovo-post-text">
+							<div className="howell-post-text">
 								<div className="post-content">
                   <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
 
@@ -100,17 +100,17 @@ const PostsDetail = ( props ) => {
 							</div>
 
 							{/* Info */}
-							<div className="onovo-post-bottom">
-								<div className="onovo-post-bottom-content">
+							<div className="howell-post-bottom">
+								<div className="howell-post-bottom-content">
 
 									{/* Categories */}
-									<div className="onovo-post-categories onovo-lnk lnk--white">
+									<div className="howell-post-categories howell-lnk lnk--white">
 										<span>Posted in: </span>
 										<a href="#" onClick={(e) => {e.preventDefault();}}>{postData.category}</a>
 									</div>
 
 									{/* Tags */}
-									<div className="onovo-post-tags">
+									<div className="howell-post-tags">
 										<span>Tags: </span>
 										<a href="#" onClick={(e) => {e.preventDefault();}}>branding</a>
 										<a href="#" onClick={(e) => {e.preventDefault();}}>design</a>
@@ -119,12 +119,12 @@ const PostsDetail = ( props ) => {
 									</div>
 
 									{/* Social*/}
-									<div className="social-share onovo-post-socials onovo-social-2">
+									<div className="social-share howell-post-socials howell-social-2">
 										<span>Share:</span>
 										<ul>
                       <li>
                         <FacebookShareButton 
-                          className="onovo-social-link onovo-hover-2"
+                          className="howell-social-link howell-hover-2"
                           url={shareUrl}
                           quote={postData.title}
                           hashtag={'#'+postData.category}
@@ -134,7 +134,7 @@ const PostsDetail = ( props ) => {
                       </li>
                       <li>
                         <TwitterShareButton 
-                          className="onovo-social-link onovo-hover-2"
+                          className="howell-social-link howell-hover-2"
                           url={shareUrl}
                           title={postData.title}
                           hashtag={'#'+postData.category}
@@ -144,7 +144,7 @@ const PostsDetail = ( props ) => {
                       </li>
                       <li>
                         <LinkedinShareButton 
-                          className="onovo-social-link onovo-hover-2"
+                          className="howell-social-link howell-hover-2"
                           url={shareUrl}
                           title={postData.title}
                           summary={postData.type}
@@ -155,7 +155,7 @@ const PostsDetail = ( props ) => {
                       </li>
                       <li>
                         <RedditShareButton 
-                          className="onovo-social-link onovo-hover-2"
+                          className="howell-social-link howell-hover-2"
                           url={shareUrl}
                           title={postData.title}
                         >
@@ -164,7 +164,7 @@ const PostsDetail = ( props ) => {
                       </li>
                       <li>
                         <PinterestShareButton 
-                          className="onovo-social-link onovo-hover-2"
+                          className="howell-social-link howell-hover-2"
                           url={shareUrl}
                           media={postData.image}
                           description={postData.title}
@@ -179,11 +179,11 @@ const PostsDetail = ( props ) => {
 							</div>
 
 							{/* Navigation */}
-							<div className="onovo-page-navigation">
-								<div className="onovo-page-navigation-content">
+							<div className="howell-page-navigation">
+								<div className="howell-page-navigation-content">
                   {prev_id != 0 && prev_id != undefined &&
                   <Link href={`/blog/${prev_id}`} className="page-navigation__prev">
-										<span className="onovo-prev onovo-hover-2">
+										<span className="howell-prev howell-hover-2">
 											<i />
 										</span>
 									</Link>
@@ -193,7 +193,7 @@ const PostsDetail = ( props ) => {
 									</Link>
                   {next_id != 0 && next_id != undefined &&
 									<Link href={`/blog/${next_id}`} className="page-navigation__next">
-										<span className="onovo-next onovo-hover-2">
+										<span className="howell-next howell-hover-2">
 											<i />
 										</span>
 									</Link>
@@ -205,7 +205,7 @@ const PostsDetail = ( props ) => {
 					</div>
 
 					{/* Post Comments */}
-					<div className="onovo-post-comments">
+					<div className="howell-post-comments">
 
 						{/* Comments */}
 						<div id="comments" className="comment post-sb__comment">
@@ -282,7 +282,7 @@ const PostsDetail = ( props ) => {
 											</label>
 										</div>
 									</div>
-									<button type="submit" className="onovo-btn onovo-hover-btn">
+									<button type="submit" className="howell-btn howell-hover-btn">
 										<span>Submit</span>
 									</button>
 								</form>

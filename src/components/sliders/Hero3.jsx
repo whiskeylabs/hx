@@ -7,20 +7,20 @@ import Link from "next/link";
 const Hero3Slider = ( { projects } ) => {
   return (
     <>
-        {/* Onovo Hero Carousel */}
-        <section className="onovo-section onovo-section-full align-center">
+        {/* howell Hero Carousel */}
+        <section className="howell-section howell-section-full align-center">
             <div className="container">
 
                 {/* Hero swiper */}
-                <div className="onovo-hero-carousel-wrap">
-                <div className="onovo-hero-carousel">
+                <div className="howell-hero-carousel-wrap">
+                <div className="howell-hero-carousel">
                     <Swiper
                         {...sliderProps.hero3Slider}
                         className="swiper-container js-hero-carousel"
                     >
                         {projects.slice(0, Data.numOfItems).map((item, key) => (
                         <SwiperSlide key={`h2s-slide-${key}`} className="swiper-slide">
-                            <div className="onovo-hero-carousel-item">
+                            <div className="howell-hero-carousel-item">
                                 <div className="slide">
                                     <Link href={`/projects/${item.id}`}>
                                         <span className="img" style={{"backgroundImage": "url("+item.image+")"}} />
@@ -47,10 +47,10 @@ const Hero3Slider = ( { projects } ) => {
 
                     {/* navs */}
                     <div className="js-hero-carousel-navs">
-                        <div className="onovo-prev js-hero-carousel-prev onovo-hover-2">
+                        <div className="howell-prev js-hero-carousel-prev howell-hover-2">
                             <i />
                         </div>
-                        <div className="onovo-next js-hero-carousel-next onovo-hover-2">
+                        <div className="howell-next js-hero-carousel-next howell-hover-2">
                             <i />
                         </div>
                     </div>

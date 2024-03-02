@@ -12,15 +12,15 @@ const Blog2 = ( { posts, totalPosts, currentPage } ) => {
     <Layouts>
       <PageBanner pageTitle={"News & Blog"} pageDesc={"Insights, thoughts, industry trends, marketing tips."} />
 
-      {/* Onovo Blog List */}
-			<div className="onovo-blog onovo-archive gap-top-140">
+      {/* howell Blog List */}
+			<div className="howell-blog howell-archive gap-top-140">
 				<div className="container">
 					<div className="row archive-row">
 						<div className="col-lg-8">
 
               {posts.map((item, key) => (
-							<div className="onovo-blog-item archive-item" key={`post-${key}`}>
-								<div className="image" data-onovo-overlay data-onovo-scroll>
+							<div className="howell-blog-item archive-item" key={`post-${key}`}>
+								<div className="image" data-howell-overlay data-howell-scroll>
 									<a href={`/blog/${item.id}`}>
 										<img src={item.image} alt={item.title} />
 									</a>
@@ -33,10 +33,10 @@ const Blog2 = ( { posts, totalPosts, currentPage } ) => {
 									<h3 className="title">
 										<Link href={`/blog/${item.id}`}>{item.title}</Link>
 									</h3>
-									<div className="onovo-text">
+									<div className="howell-text">
 										<p>
                       {item.short} <br />
-											<Link href={`/blog/${item.id}`} className="onovo-btn onovo-hover-btn">
+											<Link href={`/blog/${item.id}`} className="howell-btn howell-hover-btn">
 												<span>Read more</span>
 											</Link>
 										</p>
@@ -49,7 +49,7 @@ const Blog2 = ( { posts, totalPosts, currentPage } ) => {
 							<div className="pager">
 								<span aria-current="page" className="page-numbers current">1</span>
 								<a className="page-numbers" href="#" onClick={(e) => {e.preventDefault();}}>2</a>
-								<a className="next page-numbers onovo-next onovo-hover-2" href="#" onClick={(e) => {e.preventDefault();}}><i className="icon-arrow" /></a>
+								<a className="next page-numbers howell-next howell-hover-2" href="#" onClick={(e) => {e.preventDefault();}}><i className="icon-arrow" /></a>
 							</div>
 
 						</div>

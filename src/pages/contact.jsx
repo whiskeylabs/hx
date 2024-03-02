@@ -32,20 +32,20 @@ const Contact = () => {
     <Layouts>
         <PageBanner pageTitle={"Contact Us"} pageDesc={"Have ideas for your business? Let’s build something awesome together."} />
 
-        {/* Onovo Contact Info */}
-        <section className="onovo-section gap-top-140">
+        {/* howell Contact Info */}
+        <section className="howell-section gap-top-140 gap-bottom-140">
             <div className="container">
                 <div className="row">
                     <div className="col-xs-12 col-sm-12 col-md-12 col-lg-7">
 
                         {/* Heading */}
-                        <div className="onovo-text gap-bottom-40">
+                        <div className="howell-text gap-bottom-40">
                             <h4>Send Us A Message</h4>
                             Then let us know about it and we can see what we can do to help
                         </div>
 
                         {/* Form */}
-                        <div className="onovo-form">
+                        <div className="howell-form">
                         <Formik
                             initialValues = {{ email: '', name: '', tel: '', message: '' }}
                             validate = { values => {
@@ -160,7 +160,7 @@ const Contact = () => {
                                     </div>
                                     <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                         <p>
-                                            <button type="submit" className="onovo-btn onovo-hover-btn">
+                                            <button type="submit" className="howell-btn howell-hover-btn">
                                                 <span>Send Message</span>
                                             </button>
                                         </p>
@@ -177,18 +177,18 @@ const Contact = () => {
                     <div className="col-xs-12 col-sm-12 col-md-12 col-lg-5">
 
                         {/* Contact Info */}
-                        <div className="onovo-contact-info onovo-text-white">
+                        <div className="howell-contact-info howell-text-white">
                             <ul>
                                 <li>
                                     <h5>Contact Info</h5>
-                                    <a href="tel:+10204302973" className="onovo-lnk lnk--white" target="_blank">+ 1 (020) 430 2973</a><br/>
-                                    <a href="mailto:username@domain.com" className="onovo-lnk lnk--white" target="_blank">username@domain.com</a>
+                                    <a href="tel:+10204302973" className="howell-lnk lnk--white" target="_blank">+ 1 (020) 430 2973</a><br/>
+                                    <a href="mailto:username@domain.com" className="howell-lnk lnk--white" target="_blank">username@domain.com</a>
                                     
-                                    <div className="onovo-social-1 onovo-social-active" style={{"marginTop": "10px"}}>
+                                    <div className="howell-social-1 howell-social-active" style={{"marginTop": "10px"}}>
                                         <ul>
                                             {appData.social.map((item, key) => (
                                             <li key={`contact-social-item-${key}`}>
-                                                <a href={item.link} target="_blank" className="onovo-social-link onovo-hover-2" title={item.title}>
+                                                <a href={item.link} target="_blank" className="howell-social-link howell-hover-2" title={item.title}>
                                                     <i className={`icon ${item.icon}`} />
                                                 </a>
                                             </li>
@@ -212,45 +212,7 @@ const Contact = () => {
             </div>
         </section>
 
-        {/* Onovo Faq */}
-        <section className="onovo-section gap-top-140">
-            <div className="container">
 
-                {/* Heading */}
-                <div className="onovo-heading align-center gap-bottom-40">
-                    <div className="onovo-subtitle-1">
-                        <span>{faqData.title}</span>
-                    </div>
-                    <h2 className="onovo-title-2">
-                        <span dangerouslySetInnerHTML={{ __html: faqData.subtitle }} />
-                    </h2>
-                </div>
-
-                {/* Faq items */}
-                <div className="onovo-faq-items">
-                <Accordion defaultActiveKey="faq-acc-0">
-                    {faqData.items.map((item, key) => (
-                    <Accordion.Item key={`faq-item-${key}`} eventKey={`faq-acc-${key}`}>
-                    <div key={`faq-item-${key}`} className="onovo-faq-item onovo-collapse-item">
-                        <Accordion.Header>
-                        <h5 className="title onovo-collapse-btn">
-                            <span>{item.title}</span>
-                            <i className="arrow" />
-                        </h5>
-                        </Accordion.Header>
-                        <Accordion.Body>
-                        <div className="onovo-text">
-                            <div dangerouslySetInnerHTML={{ __html: item.text }} />
-                        </div>
-                        </Accordion.Body>
-                    </div>
-                    </Accordion.Item>
-                    ))}
-                </Accordion>
-                </div>
-                
-            </div>
-        </section>
       
     </Layouts>
   );

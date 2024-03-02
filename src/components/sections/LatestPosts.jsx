@@ -5,16 +5,16 @@ import Link from "next/link";
 const LatestPostsSection = ( { posts } ) => {
     return (
         <>
-            {/* Onovo Blog */}
-			<section className="onovo-section gap-top-140 gap-bottom-140">
+            {/* howell Blog */}
+			<section className="howell-section gap-top-140 gap-bottom-140">
 				<div className="container">
 
 					{/* Heading */}
-					<div className="onovo-heading align-center gap-bottom-40">
-						<div className="onovo-subtitle-1">
+					<div className="howell-heading align-center gap-bottom-40">
+						<div className="howell-subtitle-1">
                             <span dangerouslySetInnerHTML={{__html: Data.subtitle}} />
 						</div>
-						<h2 className="onovo-title-2">
+						<h2 className="howell-title-2">
                             <span dangerouslySetInnerHTML={{__html: Data.title}} />
 						</h2>
 					</div>
@@ -23,8 +23,8 @@ const LatestPostsSection = ( { posts } ) => {
 					<div className="row">
                         {posts.slice(0, Data.numOfItems).map((item, key) => (
 						<div key={`latest-post-item-${key}`} className="col-xs-12 col-sm-12 col-md-6 col-lg-4">
-							<div className="onovo-blog-item">
-								<div className="image" data-onovo-overlay data-onovo-scroll>
+							<div className="howell-blog-item">
+								<div className="image" data-howell-overlay data-howell-scroll>
 									<Link href={`/blog/${item.id}`}>
 										<img decoding="async" src={item.image} width="400" height="240" alt={item.title} />
 									</Link>
@@ -39,11 +39,11 @@ const LatestPostsSection = ( { posts } ) => {
 											<span>{item.title}</span>
 										</Link>
 									</h5>
-									<div className="onovo-text">
+									<div className="howell-text">
 										<div>
 											<p>
                                                 {item.short} <br />
-                                                <Link href={`/blog/${item.id}`} className="onovo-btn onovo-hover-btn">
+                                                <Link href={`/blog/${item.id}`} className="howell-btn howell-hover-btn">
                                                     <span>Read more</span>
                                                 </Link>
 											</p>
@@ -57,7 +57,7 @@ const LatestPostsSection = ( { posts } ) => {
 
 					{/* Button */}
 					<div className="align-center">
-						<Link className="onovo-btn onovo-hover-btn" href={Data.button.link}>
+						<Link className="howell-btn howell-hover-btn" href={Data.button.link}>
 							<i className="arrow">
 								<span />
 							</i>

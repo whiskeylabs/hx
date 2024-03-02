@@ -12,8 +12,8 @@ const Team = ( props ) => {
     <Layouts>
 		<PageBanner pageTitle={"Our Team"} pageDesc={"Meet our creativity company family."} />
 
-		{/* Onovo Team */}
-		<section className="onovo-section gap-top-140 gap-bottom-140">
+		{/* howell Team */}
+		<section className="howell-section gap-top-140 gap-bottom-140">
 			<div className="container">
 
 				{/* Team items */}
@@ -21,17 +21,17 @@ const Team = ( props ) => {
 
 					{props.team.map((item, key) => (
 					<div key={`team-item-${key}`} className="col-xs-12 col-sm-12 col-md-6 col-lg-3">
-						<div className="onovo-team-two">
-							<div className="onovo-team-two-item">
-								<div className="image onovo-hover-3 onovo-hover-black-30" data-onovo-overlay data-onovo-scroll>
+						<div className="howell-team-two">
+							<div className="howell-team-two-item">
+								<div className="image howell-hover-3 howell-hover-black-30" data-howell-overlay data-howell-scroll>
 									<Link href={`/team/${item.id}`}>
 										<img src={item.image} alt={item.name} />
 									</Link>
-									<div className="onovo-social-2">
+									<div className="howell-social-2">
 										<ul>
 											{item.social.map((link, link_key) => (
 											<li key={`team-item-${key}-link-${link_key}`}>
-												<a key={`teamsocial-item-${link_key}`} className="onovo-social-link onovo-hover-2" href={link.link} title={link.title} target="_blank">
+												<a key={`teamsocial-item-${link_key}`} className="howell-social-link howell-hover-2" href={link.link} title={link.title} target="_blank">
 													<i aria-hidden="true" className={link.icon} />
 												</a>
 											</li>
@@ -41,12 +41,12 @@ const Team = ( props ) => {
 								</div>
 								<div className="desc">
 									<h5 className="title">
-										<Link href={`/team/${item.id}`} className="onovo-lnk">
-											<span data-splitting data-onovo-scroll>{item.name}</span>
+										<Link href={`/team/${item.id}`} className="howell-lnk">
+											<span data-splitting data-howell-scroll>{item.name}</span>
 										</Link>
 									</h5>
-									<div className="onovo-subtitle-1">
-										<span data-splitting data-onovo-scroll>{item.role}</span>
+									<div className="howell-subtitle-1">
+										<span data-splitting data-howell-scroll>{item.role}</span>
 									</div>
 								</div>
 							</div>
@@ -56,7 +56,7 @@ const Team = ( props ) => {
 
 					{/* Button */}
 					<div className="col-xs-12 col-sm-12 col-md-6 col-lg-3 align-center align-self-center">
-						<Link className="onovo-btn-circle onovo-hover-2" href={'/contact'}>
+						<Link className="howell-btn-circle howell-hover-2" href={'/contact'}>
 							<i className="arrow">
 								<span />
 							</i>

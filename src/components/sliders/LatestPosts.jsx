@@ -7,30 +7,30 @@ import { Swiper, SwiperSlide } from "swiper/react";
 const LatestPostsSlider = ( { posts } ) => {
     return (
         <>
-            {/* Onovo Blog Carousel */}
-			<section className="onovo-section onovo-section-bg gap-top-140 gap-bottom-140">
+            {/* howell Blog Carousel */}
+			<section className="howell-section howell-section-bg gap-top-140 gap-bottom-140">
 				<div className="container">
 
 					{/* Heading */}
-					<div className="onovo-heading gap-bottom-40">
-						<div className="onovo-subtitle-1">
+					<div className="howell-heading gap-bottom-40">
+						<div className="howell-subtitle-1">
 							<span>{Data.subtitle}</span>
 						</div>
-						<h2 className="onovo-title-2">
+						<h2 className="howell-title-2">
                             <span dangerouslySetInnerHTML={{__html: Data.title}} />
 						</h2>
 					</div>
 
 					{/* Blog swiper */}
-					<div className="onovo-blog-carousel">
+					<div className="howell-blog-carousel">
                         <Swiper
                             {...sliderProps.blogSlider}
                             className="swiper-container js-blog-carousel"
                         >       
                             {posts.slice(0, Data.numOfItems).map((item, key) => (
                             <SwiperSlide key={`bs-slide-${key}`} className="swiper-slide" data-swiper-autoplay>
-                                <div className="onovo-blog-slide-item">
-                                    <div className="image" data-onovo-overlay data-onovo-scroll>
+                                <div className="howell-blog-slide-item">
+                                    <div className="image" data-howell-overlay data-howell-scroll>
                                         <Link href={`/blog/${item.id}`}>
                                             <img src={item.image} alt={item.title} />
                                         </Link>
@@ -45,7 +45,7 @@ const LatestPostsSlider = ( { posts } ) => {
                                         <div className="text">
                                             <div data-splitting>
                                                 <p>{item.short}<br />
-                                                    <Link href={`/blog/${item.id}`} className="onovo-btn onovo-hover-btn">
+                                                    <Link href={`/blog/${item.id}`} className="howell-btn howell-hover-btn">
                                                         <span>Read more</span>
                                                     </Link>
                                                 </p>
@@ -58,16 +58,16 @@ const LatestPostsSlider = ( { posts } ) => {
                         
 
                             {/* navs */}
-                            <div className="onovo-navs">
-                                <div className="onovo-navs-box js-blog-carousel-navs">
-                                    <div className="onovo-prev js-blog-carousel-prev onovo-hover-2">
+                            <div className="howell-navs">
+                                <div className="howell-navs-box js-blog-carousel-navs">
+                                    <div className="howell-prev js-blog-carousel-prev howell-hover-2">
                                         <i />
                                     </div>
-                                    <div className="onovo-paginations-container">
-                                        <div className="onovo-paginations js-blog-pagination" />
+                                    <div className="howell-paginations-container">
+                                        <div className="howell-paginations js-blog-pagination" />
                                         <div className="swiper-nav-active" />
                                     </div>
-                                    <div className="onovo-next js-blog-carousel-next onovo-hover-2">
+                                    <div className="howell-next js-blog-carousel-next howell-hover-2">
                                         <i />
                                     </div>
                                 </div>

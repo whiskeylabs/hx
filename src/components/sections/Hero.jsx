@@ -10,7 +10,7 @@ import ScrollOut from 'scroll-out'
 const HeroSection = () => {
 	useEffect(() => {
 		Splitting({ by: 'lines' });
-		ScrollOut({targets: '[data-onovo-scroll]', once: true});
+		ScrollOut({targets: '[data-howell-scroll]', once: true});
 	
 		const allWrap = document.querySelectorAll(".word");
 		allWrap.forEach((item) => {
@@ -22,10 +22,10 @@ const HeroSection = () => {
 		  }
 		});
 	
-		const allOverlays = document.querySelectorAll("[data-onovo-overlay]");
+		const allOverlays = document.querySelectorAll("[data-howell-overlay]");
 		allOverlays.forEach((item) => {
 		  let overlay = document.createElement("div");
-		  overlay.classList.add('onovo-overlay');
+		  overlay.classList.add('howell-overlay');
 		  item.appendChild(overlay);
 		});
 	}, []);
@@ -39,8 +39,8 @@ const HeroSection = () => {
 
     return (
         <>
-            {/* Onovo Hero */}
-			<section className="onovo-section onovo-hero">
+            {/* howell Hero */}
+			<section className="howell-section howell-hero">
 				<div className="image">
 					<video autoPlay muted={!mute} loop playsInline id="heroVideo">
 						<source src={Data.video} type="video/mp4" />
@@ -48,22 +48,22 @@ const HeroSection = () => {
 					<div className="ovrl" style={{"opacity": "0.25"}} />
 				</div>
 				<div className="container">
-					<h1 className="title onovo-text-white">
-						<span data-splitting data-onovo-scroll>
+					<h1 className="title howell-text-white">
+						<span data-splitting data-howell-scroll>
                             <span dangerouslySetInnerHTML={{__html: Data.title.text}} />
-                            <span className="onovo-sep word">
+                            <span className="howell-sep word">
 								<i className="sep-img" style={{"backgroundImage": "url("+Data.title.icon+")"}} />
 							</span>
 						</span>
 					</h1>
 					<div className="text">
-						<div className="subtitle onovo-text-white">
-							<div data-splitting data-onovo-scroll>
+						<div className="subtitle howell-text-white">
+							<div data-splitting data-howell-scroll>
                                 <div dangerouslySetInnerHTML={{__html: Data.subtitle}} />
                             </div>
 						</div>
 					</div>
-					<a href="#" className={mute ? "onovo-play-btn active" : "onovo-play-btn"} onClick={(e) => clickedMuteHeroVideo(e) }>
+					<a href="#" className={mute ? "howell-play-btn active" : "howell-play-btn"} onClick={(e) => clickedMuteHeroVideo(e) }>
 						<span className="play-circles" />
 						<span className="play-lines">
 							<span />

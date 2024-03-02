@@ -11,41 +11,41 @@ const ShowcaseSection = ( { projects } ) => {
 
     return (
         <>
-            {/* Onovo Showcase */}
-			<section className="onovo-section gap-bottom-140" style={{"borderBottom": "1px solid #555"}}>
+            {/* howell Showcase */}
+			<section className="howell-section gap-bottom-140" style={{"borderBottom": "1px solid #555"}}>
 				<div className="container">
 
 					{/* Heading */}
-					<div className="onovo-heading gap-bottom-40">
-						<div className="onovo-subtitle-1">
+					<div className="howell-heading gap-bottom-40">
+						<div className="howell-subtitle-1">
 							<span>{Data.subtitle}</span>
 						</div>
-						<h2 className="onovo-title-2">
+						<h2 className="howell-title-2">
 							<span>{Data.title}</span>
 						</h2>
 					</div>
 
 					{/* Showcase */}
-					<div className="onovo-showcase gap-bottom-40">
-						<div className="img-circle onovo-circle-move" />
+					<div className="howell-showcase gap-bottom-40">
+						<div className="img-circle howell-circle-move" />
 
 						{/* Showcase items */}
-						<div className="onovo-showcase-items">
+						<div className="howell-showcase-items">
                             {projects.slice(0, Data.numOfItems).map((item, key) => (
-							<div key={`showcase-item-${key}`} className="onovo-showcase-item">
+							<div key={`showcase-item-${key}`} className="howell-showcase-item">
 								<div className="category">
 									<a href={`/projects/${item.id}`}>
-										<span data-splitting data-onovo-scroll>
+										<span data-splitting data-howell-scroll>
 											<span>{item.category}</span>
 										</span>
 									</a>
 								</div>
 								<h3 className="title">
 									<a href={`/projects/${item.id}`}>
-										<span className="onovo-lnk" data-splitting data-onovo-scroll>{item.title}</span>
+										<span className="howell-lnk" data-splitting data-howell-scroll>{item.title}</span>
 									</a>
 								</h3>
-								<div className="image" data-onovo-overlay data-onovo-scroll>
+								<div className="image" data-howell-overlay data-howell-scroll>
 									<span className="img" style={{"backgroundImage": "url(" + item.image + ")"}} />
 								</div>
 							</div>
@@ -55,7 +55,7 @@ const ShowcaseSection = ( { projects } ) => {
 					</div>
 
 					{/* Button */}
-					<Link className="onovo-btn onovo-hover-btn" href={Data.button.link}>
+					<Link className="howell-btn howell-hover-btn" href={Data.button.link}>
 						<i className="arrow">
 							<span />
 						</i>

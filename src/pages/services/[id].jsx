@@ -30,8 +30,8 @@ const ServiceDetail = ( { postData, services } ) => {
     <Layouts>
 		<PageBanner pageTitle={postData.title} pageDesc={"Our values and vaulted us to the top of our industry."} />
 
-		{/* Onovo Service Detail */}
-		<section className="onovo-section gap-top-140">
+		{/* howell Service Detail */}
+		<section className="howell-section gap-top-140">
 			<div className="container">
 				<div className="row">
 					<div className="col-xs-12 col-sm-12 col-md-12 col-lg-8">
@@ -42,7 +42,7 @@ const ServiceDetail = ( { postData, services } ) => {
 					</div>
 
 					{postData.contentHtml != "" &&
-					<div className="onovo-text">
+					<div className="howell-text">
 						<div dangerouslySetInnerHTML={{__html : postData.contentHtml}} />
 					</div>
 					}
@@ -55,18 +55,18 @@ const ServiceDetail = ( { postData, services } ) => {
 
 						{/* Faq items */}
 						<Accordion>
-						<div className="onovo-faq-items">
+						<div className="howell-faq-items">
 						{postData.accordion.items.map((item, key) => (
 						<Accordion.Item key={`faq-item-${key}`} eventKey={`faq-acc-${key}`}>
-						<div className="onovo-faq-item onovo-collapse-item">
+						<div className="howell-faq-item howell-collapse-item">
 							<Accordion.Header>
-							<h5 className="title onovo-collapse-btn">
+							<h5 className="title howell-collapse-btn">
 							<span>{item.heading}</span>
 							<i className="arrow" />
 							</h5>
 							</Accordion.Header>
 							<Accordion.Body>
-							<div className="onovo-text">
+							<div className="howell-text">
 								<div dangerouslySetInnerHTML={{__html : item.content}} />
 							</div>
 							</Accordion.Body>
@@ -83,7 +83,7 @@ const ServiceDetail = ( { postData, services } ) => {
 					{typeof postData.additional != "undefined" &&
 					<>
 					{postData.additional.enabled == 1 &&
-						<div className="onovo-text gap-top-50">
+						<div className="howell-text gap-top-50">
 						<div dangerouslySetInnerHTML={{__html : postData.additional.content}} />
 						</div>
 					}
@@ -94,17 +94,17 @@ const ServiceDetail = ( { postData, services } ) => {
 					<div className="col-xs-12 col-sm-12 col-md-12 col-lg-4">
 
 						{/* Service menu */}
-						<div className="onovo-service-item onovo-service-no-icon gap-bottom-40">
-							<div className="onovo-service-item-inner onovo-hover-3 onovo-hover-black">
+						<div className="howell-service-item howell-service-no-icon gap-bottom-40">
+							<div className="howell-service-item-inner howell-hover-3 howell-hover-black">
 								<h5 className="title">
-									<span data-splitting data-onovo-scroll> Services List </span>
+									<span data-splitting data-howell-scroll> Services List </span>
 								</h5>
 								<div className="list">
 									<ul>
 										{services.map((item, key) => (
 										<li key={`services-item-${key}`}>
-											<a className="onovo-lnk" href={`/services/${item.id}`}>
-												<span data-splitting data-onovo-scroll>{item.title}</span>
+											<a className="howell-lnk" href={`/services/${item.id}`}>
+												<span data-splitting data-howell-scroll>{item.title}</span>
 											</a>
 										</li>
 										))}
@@ -113,8 +113,8 @@ const ServiceDetail = ( { postData, services } ) => {
 							</div>
 						</div>
 
-						{/* Onovo Form */}
-						<div className="onovo-form-box onovo-text-white">
+						{/* howell Form */}
+						<div className="howell-form-box howell-text-white">
 							<h5>Send Us A Message</h5>
 							<p>Feel some love, to see what we can do...t!</p>
 							<Formik
@@ -236,7 +236,7 @@ const ServiceDetail = ( { postData, services } ) => {
 									</div>
 									<div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 										<p>
-											<button type="submit" className="onovo-btn onovo-hover-btn btn--active">
+											<button type="submit" className="howell-btn howell-hover-btn btn--active">
 												<span>Send Message</span>
 											</button>
 										</p>
@@ -254,16 +254,16 @@ const ServiceDetail = ( { postData, services } ) => {
 			</div>
 		</section>
 
-		{/* Onovo Navs */}
-		<section className="onovo-section">
+		{/* howell Navs */}
+		<section className="howell-section">
 			<div className="container">
 
 				{/* Navigation */}
-				<div className="onovo-page-navigation">
-					<div className="onovo-page-navigation-content">
+				<div className="howell-page-navigation">
+					<div className="howell-page-navigation-content">
 						{prev_id != 0 && prev_id != undefined &&
 						<Link href={`/services/${prev_id}`} className="page-navigation__prev">
-							<span className="onovo-prev onovo-hover-2">
+							<span className="howell-prev howell-hover-2">
 								<i />
 							</span>
 						</Link>
@@ -273,7 +273,7 @@ const ServiceDetail = ( { postData, services } ) => {
 						</Link>
 						{next_id != 0 && next_id != undefined &&
 						<Link href={`/services/${next_id}`} className="page-navigation__next">
-							<span className="onovo-next onovo-hover-2">
+							<span className="howell-next howell-hover-2">
 								<i />
 							</span>
 						</Link>

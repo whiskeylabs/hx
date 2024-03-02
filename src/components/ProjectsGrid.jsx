@@ -11,11 +11,11 @@ const ProjectsGrid = ({ projects, layout, cols, sideFilter, masonry, galleryMode
 
   useEffect(() => {
     setTimeout(() => {
-      isotope.current = new Isotope(".onovo-portfolio-items", {
-        itemSelector: ".onovo-portfolio-col",
+      isotope.current = new Isotope(".howell-portfolio-items", {
+        itemSelector: ".howell-portfolio-col",
         percentPosition: true,
         masonry: {
-          columnWidth: ".onovo-portfolio-col",
+          columnWidth: ".howell-portfolio-col",
         },
         animationOptions: {
           duration: 750,
@@ -25,7 +25,7 @@ const ProjectsGrid = ({ projects, layout, cols, sideFilter, masonry, galleryMode
       });
     }, 1000);
 
-    let filterNavActive = document.querySelectorAll('.onovo-filter-nav-active');
+    let filterNavActive = document.querySelectorAll('.howell-filter-nav-active');
 
     filterNavActive.forEach((item) => {
 		item.style.width = item.parentNode.querySelector('.item--active').parentNode.offsetWidth+6+'px';
@@ -42,7 +42,7 @@ const ProjectsGrid = ({ projects, layout, cols, sideFilter, masonry, galleryMode
 
   const handleFilterKeyChange = (key) => () => {
     setFilterKey(key);
-    const filterLinks = document.querySelectorAll(".js-onovo-filter li");
+    const filterLinks = document.querySelectorAll(".js-howell-filter li");
 
     filterLinks.forEach((filter) => {
       const filterValue = filter.querySelector('button').getAttribute("data-filter");
@@ -53,8 +53,8 @@ const ProjectsGrid = ({ projects, layout, cols, sideFilter, masonry, galleryMode
       }
     });
 
-    const activeItem = document.querySelector('.onovo-filter.filter--default .item--active');
-    const activeFilterNav = document.querySelector('.onovo-filter.filter--default .onovo-filter-nav-active');
+    const activeItem = document.querySelector('.howell-filter.filter--default .item--active');
+    const activeFilterNav = document.querySelector('.howell-filter.filter--default .howell-filter-nav-active');
 
     if ( activeFilterNav != undefined ) {
         let current_pos = activeItem.parentNode.offsetLeft;
@@ -80,30 +80,30 @@ const ProjectsGrid = ({ projects, layout, cols, sideFilter, masonry, galleryMode
 
   return (
     <>
-      {/* Onovo Projects */}
-      <section className="onovo-section gap-top-140">
+      {/* howell Projects */}
+      <section className="howell-section gap-top-140">
         <div className="container">
 
           {/* Projects Grid */}
-          <div className={sideFilter ? "onovo-portfolio portfolio--side" : "onovo-portfolio"}>
+          <div className={sideFilter ? "howell-portfolio portfolio--side" : "howell-portfolio"}>
             <div className="row">
                 <div className={!sideFilter ? "col-xs-12 col-sm-12 col-md-12 col-lg-12" : "col-xs-12 col-sm-12 col-md-12 col-lg-3"}>
 
                     {/* Filter projects */}
-                    <div className="onovo-filter-container">
-                        <div className={!sideFilter ? "onovo-filter js-onovo-filter filter--default" : "onovo-filter js-onovo-filter"}>
+                    <div className="howell-filter-container">
+                        <div className={!sideFilter ? "howell-filter js-howell-filter filter--default" : "howell-filter js-howell-filter"}>
                             {!sideFilter &&
-                            <div className="onovo-filter-nav-active" />
+                            <div className="howell-filter-nav-active" />
                             }
                             <ul>
                                 <li key={`categories-item-first`}>
-                                    <button onClick={handleFilterKeyChange("*")} className="onovo-filter-item item--active" type="button" data-filter="*">
+                                    <button onClick={handleFilterKeyChange("*")} className="howell-filter-item item--active" type="button" data-filter="*">
                                         <span>All Projects</span>
                                     </button>
                                 </li>
                                 {appData.settings.portfolio.categories.map((item, key) => (
                                 <li key={`categories-item-${key}`}>
-                                    <button onClick={handleFilterKeyChange(item.slug)} className="onovo-filter-item" type="button" data-filter={item.slug}>
+                                    <button onClick={handleFilterKeyChange(item.slug)} className="howell-filter-item" type="button" data-filter={item.slug}>
                                         <span>{item.label}</span>
                                     </button>
                                 </li>
@@ -116,25 +116,25 @@ const ProjectsGrid = ({ projects, layout, cols, sideFilter, masonry, galleryMode
                 <div className={!sideFilter ? "col-xs-12 col-sm-12 col-md-12 col-lg-12" : "col-xs-12 col-sm-12 col-md-12 col-lg-9"}>
 
                     {/* Projects items */}
-                    <div className="row onovo-portfolio-items">
+                    <div className="row howell-portfolio-items">
 
                         {projects.map((item, key) => (
-                        <div key={`projects-item-${key}`} className={`${columns} onovo-portfolio-col ${item.category_slug}`}>
+                        <div key={`projects-item-${key}`} className={`${columns} howell-portfolio-col ${item.category_slug}`}>
                             {layout == "grid" &&    
-                                <div className="onovo-portfolio-item">
-                                    <div className={masonry ? "image" : "image image-square"} data-onovo-overlay data-onovo-scroll>
-                                        <Link href={galleryMode ? item.image : `/projects/${item.id}`} className="onovo-hover-3">
+                                <div className="howell-portfolio-item">
+                                    <div className={masonry ? "image" : "image image-square"} data-howell-overlay data-howell-scroll>
+                                        <Link href={galleryMode ? item.image : `/projects/${item.id}`} className="howell-hover-3">
                                             <img src={item.image} alt={item.title} />
                                         </Link>
                                     </div>
                                     <div className="desc">
                                         <h5 className="title">
-                                            <Link className="onovo-lnk" href={galleryMode ? item.image : `/projects/${item.id}`}>
-                                                <span data-splitting data-onovo-scroll>{item.title}</span>
+                                            <Link className="howell-lnk" href={galleryMode ? item.image : `/projects/${item.id}`}>
+                                                <span data-splitting data-howell-scroll>{item.title}</span>
                                             </Link>
                                         </h5>
                                         <div className="text">
-                                            <div data-splitting data-onovo-scroll>
+                                            <div data-splitting data-howell-scroll>
                                                 <span>{item.category}</span>
                                             </div>
                                         </div>
@@ -142,26 +142,26 @@ const ProjectsGrid = ({ projects, layout, cols, sideFilter, masonry, galleryMode
                                 </div>
                             }
                             {layout == "list" &&
-                                <div className="onovo-portfolio-item onovo-portfolio-item-list">
-                                    <div className="image" data-onovo-overlay data-onovo-scroll>
-                                        <Link href={`/projects/${item.id}`} className="onovo-hover-3">
+                                <div className="howell-portfolio-item howell-portfolio-item-list">
+                                    <div className="image" data-howell-overlay data-howell-scroll>
+                                        <Link href={`/projects/${item.id}`} className="howell-hover-3">
                                           <img src={item.image} alt={item.title} />
                                         </Link>
                                     </div>
                                     <div className="desc">
                                       <div className="text">
-                                        <div data-splitting data-onovo-scroll>
+                                        <div data-splitting data-howell-scroll>
                                           <span>{item.category}</span>
                                         </div>
                                       </div>
                                       <h5 className="title">
-                                        <Link className="onovo-lnk" href={`/projects/${item.id}`}>
-                                          <span data-splitting data-onovo-scroll>{item.title}</span>
+                                        <Link className="howell-lnk" href={`/projects/${item.id}`}>
+                                          <span data-splitting data-howell-scroll>{item.title}</span>
                                         </Link>
                                       </h5>
-                                      <div className="onovo-text">
+                                      <div className="howell-text">
                                         <div>
-                                          <ul data-splitting="" data-onovo-scroll="">
+                                          <ul data-splitting="" data-howell-scroll="">
                                             <li key={`projects-list-item-${key}-attr-1`}>
                                               <strong>Project Type</strong>
                                               <br /> {item.type}

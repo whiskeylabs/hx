@@ -9,7 +9,7 @@ const Pagination = ({ currentPage, totalItems, perPage, renderPageLink }) => {
     return (
         <div className="pager">
             {currentPage > 1 &&
-            <Link key="pagination-item-prev" href={currentPage > 1 ? renderPageLink( currentPage - 1 ) : renderPageLink( currentPage )} className="prev page-numbers onovo-prev onovo-hover-2"><i className="icon-arrow" /></Link>
+            <Link key="pagination-item-prev" href={currentPage > 1 ? renderPageLink( currentPage - 1 ) : renderPageLink( currentPage )} className="prev page-numbers howell-prev howell-hover-2"><i className="icon-arrow" /></Link>
             }
 
             {pages.map((pageNumber, i) =>
@@ -35,7 +35,7 @@ const Pagination = ({ currentPage, totalItems, perPage, renderPageLink }) => {
             )}
 
             {currentPage < pages.length &&
-            <Link key="pagination-item-next" href={currentPage < pages.length ? renderPageLink( currentPage + 1 ) : renderPageLink( currentPage )} className="next page-numbers onovo-next onovo-hover-2"><i className="icon-arrow" /></Link>
+            <Link key="pagination-item-next" href={currentPage < pages.length ? renderPageLink( currentPage + 1 ) : renderPageLink( currentPage )} className="next page-numbers howell-next howell-hover-2"><i className="icon-arrow" /></Link>
             }
         </div>
     );

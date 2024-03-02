@@ -12,21 +12,21 @@ const PageBanner = ({ pageTitle, pageDesc }) => {
       <Head>
         <title>{headTitle}</title>
       </Head>
-      {/* Onovo Intro */}
-			<section className="onovo-section onovo-intro intro--black">
+      {/* howell Intro */}
+			<section className="howell-section howell-intro intro--black">
 				<div className="container">
-					<h1 className="onovo-title-1  onovo-text-white">
+					<h1 className="howell-title-1  howell-text-white">
 						<span>{pageTitle}</span>
-						<span className="onovo-sep word">
+						<span className="howell-sep word">
 							<i className="sep-img" style={{"backgroundImage": "url(/images/title_icon.svg)"}} />
 						</span>
 					</h1>
 					{pageDesc != "" &&
-					<div className="onovo-subtitle-2  onovo-text-white">
+					<div className="howell-subtitle-2  howell-text-white">
 						<span>{pageDesc}</span>
 					</div>
 					}
-					<div className="onovo-breadcrums">
+					<div className="howell-breadcrums">
 						<ul>
 							<li>
 								<Link href="/">Home</Link>
