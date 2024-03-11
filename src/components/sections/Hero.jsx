@@ -50,12 +50,14 @@ const HeroSection = () => {
 				<div className="container">
 					<h1 className="title howell-text-white">
 						<span data-splitting data-howell-scroll>
-                            <span dangerouslySetInnerHTML={{__html: Data.title.text}} />
-                            <span className="howell-sep word">
-								<i className="sep-img" style={{"backgroundImage": "url("+Data.title.icon+")"}} />
-							</span>
+                            {/* <span dangerouslySetInnerHTML={{__html: Data.title.text}} />
+                            <span className="howell-sep word"></span> */}
+									<div class="name-graphic"  style={{"max-width": "500px"}}>
+					<img className="wwip-img" src={Data.image} alt="Where Wild Ideas Play" />
+						</div>
 						</span>
 					</h1>
+			
 					<div className="text">
 						<div className="subtitle howell-text-white">
 							<div data-splitting data-howell-scroll>

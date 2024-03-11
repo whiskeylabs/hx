@@ -7895,3 +7895,8 @@ body div.wpforms-container .wpforms-form button.onovo-btn[type=submit],
 }
 
 /* --options end */
+
+
+ .name-graphic {
+  max-width: 500px;
+ }
